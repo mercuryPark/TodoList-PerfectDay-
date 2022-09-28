@@ -1,0 +1,382 @@
+/* *{
+    overflow-y: hidden;
+} */
+
+/* css 초기화 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.none{
+    display: none;
+}
+
+.flexbox{
+    display: flex;
+    /* justify-content: space-around; */
+}
+.toggleLine{
+    color: #999;
+    text-decoration: line-through;
+}
+.backButton{
+    padding: 10px;
+    background-color: #DBEFE8;
+    display: block;
+    font-size: 20px;
+}
+@font-face {
+    font-family: 'SEBANG_Gothic_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'InfinitySans-RegularA1';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-RegularA1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'establishRetrosansOTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/establishRetrosansOTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* layout */
+
+#totalWrap{
+width: 100%;
+height: 100%;
+}
+#totalWrap #mainWrap{
+
+}
+
+.stepOne .question span{
+    display: none;
+  }
+  
+  .typing {  
+  /*position: absolute;*/ 
+    display: inline-block; 
+    animation-name: cursor; 
+    animation-duration: 0.3s; 
+    animation-iteration-count: infinite; 
+   } 
+   /* @keyframes cursor{ 
+    0%{border-right: 1px solid #fff} 
+    50%{border-right: 1px solid #000} 
+    100%{border-right: 1px solid #fff} 
+  } */
+
+/* step - 1 */
+
+.stepOne{
+    /* text-align: left; */
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
+.stepOne .question span{
+font-size: 25px;
+
+}
+.stepOne .question .typing{
+    display: inline;
+    font-family: 'SEBANG_Gothic_Bold' !important;
+    font-size: 40px;
+}
+.stepOne .question .clientName{
+    border: 0px;
+    border-bottom: 2px solid #000;
+    font-size: 30px;
+    width: 100px;
+    outline: none;
+    display: inline-block !important;
+}
+.stepOne .question .clientName{
+    outline: none !important;
+}
+.stepOne .stepBtn{
+    padding: 8px;
+    margin: 30px;
+    /* border: 1px solid #999; */
+    border-radius: 5px;
+    cursor:pointer
+}
+
+/* step - 2 */
+
+.stepTwo{
+    text-align: center;
+    padding: 50px 50px;
+}
+.stepTwo h1{
+    padding-bottom: 30px;
+}
+
+.stepTwo .choice{
+    /* display: flex; */
+    justify-content: center;
+}
+.stepTwo .choice .bigbox{
+    background-color: #eee;
+    height: 90%;
+    width: 1380px;
+    position: absolute;
+    right: 250px;
+    left: 30px;
+    top: 100px;
+    bottom: 20px;
+    z-index: -1;
+    border-radius: 5px;
+}
+.stepTwo img{
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 32%);
+
+}
+.stepTwo p{
+    font-size: 20px;
+    padding: 10px;
+    /* font-weight: 700; */
+}
+
+.stepTwo .choice .choiceNotice{
+    height: 80px;
+    line-height: 80px;
+    font-size: 20px;
+    font-family: 'EarlyFontDiary' !important;
+}
+
+.stepTwo .choice .choiceOne {
+    margin-right: 30px;
+    position: relative;
+}
+/* .stepTwo .choice .choiceOne p{
+    position: absolute;
+    background-color: #fff;
+    top: 10px;
+    left: 10px;
+} */
+
+.stepTwo .choice .choiceOne img{
+    width: 620px;
+    height: 415px;
+    filter: brightness(50%);
+}
+
+.stepTwo .choice .choiceOne .choiceModal{
+    position: relative;
+}
+.stepTwo .choice .choiceOne .choiceModal p{
+    position: absolute;
+    /* background-color: #fff; */
+    /* color: #fff; */
+    top: 25px;
+    left: 20px;
+}
+.stepTwo .choice .choiceOne .choiceModal img{
+    /* width: 100px; */
+    height: 150px;
+    margin-top: 10px;
+    background-color: #e3e3e3;
+    filter: brightness(50%);
+}
+.stepTwo .choice .choiceTwo{
+   margin-right: 20px;
+   margin-bottom: 30px;
+  position: relative;
+  
+}
+.stepTwo .choice .choiceOne p,
+.stepTwo .choice .choiceTwo p{
+    position: absolute;
+    background-color: #fff;
+    /* color: #fff !important; */
+    border-radius: 5px;
+    font-size: 30px;
+    top: 25px;
+    left: 30px;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 32%);
+    padding: 10px;
+    font-weight: 700;
+}
+/* .stepTwo .choice .choiceOne i,
+.stepTwo .choice .choiceTwo i{
+    position: absolute;
+    border-radius: 100%;
+    width: 20px;
+    font-size: 20px;
+    top: 25px;
+    right: 30px;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 32%);
+    padding: 8px;
+    font-weight: 700;
+} */
+.stepTwo .choice .choiceTwo img{
+    width: 700px;
+    height: 580px;
+    filter: brightness(50%);
+}
+
+.stepThree{
+    text-align: center;
+    padding: 100px;
+}
+.stepThree .listItem{
+    padding: 15px 0;
+    text-align: left;
+    border-bottom: 1px solid #ededed;
+}
+.stepThree .detailList{
+    width: 100%;
+    border: 0px;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 15px;
+}
+.stepThree .detailList:focus{
+    outline: none;
+}
+.stepThree .listItem .listPoint{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    border:2px solid gray;
+    margin-right: 10px;
+}
+.stepThree .listItem .delete{
+    float: left;
+    width: 14px;
+    height: 14px;
+    border: 2px solid gray;
+    border-radius: 50%;
+    margin-right: 10px;
+
+    /* padding: 0px 10px; */
+}
+.stepThree .listItem .delete.mouseOver{
+    border: 2px solid #DBEFE8;
+    transition: all .3s;
+
+}
+
+.stepThree h1{
+    /* margin: 50px; */
+    width: 25px;
+    padding: 5px;
+    background-color:#DBEFE8;
+    /* border: 1px solid #000; */
+    font-size: 20px;
+    border-radius: 50%;
+}
+.stepThree .addList{
+    /* width: 22px; */
+    margin-right: 5px;
+}
+.stepThree .allDelete{
+    font-size: 2px !important;
+
+    /* width: 20px; */
+}
+
+.today{
+    text-align: left;
+    margin-bottom: 20px;
+}
+.today p{
+    display: inline;
+    font-size: 20px;
+    font-weight: 700;
+    padding-right: 5px;
+}
+.today #date{
+    color: gray;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+
+.endingCredit{
+    color: #fff;
+    text-align: center;
+    /* padding: 100px; */
+    position: relative;
+    top: 1000px;
+}
+.credit{
+    color: #fff;
+    position: absolute;
+    bottom: 0px;
+    top: 0px;
+    text-align: center;
+    border: 2px solid rgb(66, 66, 66);
+    background-color: #000;
+    /* opacity: .5; */
+}
+.credit p{
+    margin-right: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+.backgroundBlack{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-color: #000;
+    opacity: .8;
+    
+}
+
+
+
+
+
+
